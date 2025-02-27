@@ -1,0 +1,10 @@
+{% extends "layout.html" %} {% block content %}
+<h2>{% if from.intance.pk %}Edit Tweet {% else %} Create Tweet{% endif %}</h2>
+
+<form method="post" enctype="multipart/form-data" class='form'>
+  {% csrf_token %}
+  {{form}}
+  <button type="submit">Submit</button>
+  <a href="{% url "tweet_list" %}">back to tweet</a>
+</form>
+{% endblock %}

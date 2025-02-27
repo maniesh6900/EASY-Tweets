@@ -1,0 +1,9 @@
+{% extends "layout.html" %} {% block title %}
+<h1>Home Page</h1>
+{% endblock %} {% block content %}
+<div class='bg-secondary p-2 border w-25 text-center m-4 rounded'>
+    <a href="{% url "tweet_list" %}" 
+    class='text-decoration-none fs-4 text-light-emphasis fw-bold' 
+    >Tweets Posting App</a>
+</div>
+{% endblock %}
